@@ -1,0 +1,138 @@
+main > div {
+  padding: 2rem 1rem;
+}
+
+.section {
+  border-top: 7px solid #5270ff;
+  position: relative;
+  padding-top: 2rem;
+  margin: 1.5rem 0;
+}
+.section > h2 {
+  color: #fff;
+  background-color: #5270ff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  width: 225px;
+  text-align: center;
+  position: absolute;
+  font-weight: 500;
+  font-size: 1.25rem;
+  top: -2.5px;
+  left: -2px;
+  transform: translateY(-50%);
+}
+
+.section .career {
+  display: grid;
+  gap: 0.5rem;
+}
+.section .career > span {
+  font-weight: 600;
+  color: #5270ff;
+}
+.section .career > p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.section .soft-skills,
+.section .trainings,
+.section .work-experience,
+.section .technologies {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+.section .soft-skills > li {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.section .trainings > li {
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 0.5rem;
+}
+.section .trainings > li > div {
+  font-size: 1.1rem;
+  color: #5270ff;
+}
+.section .trainings > li > div > p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.work-experience > li {
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 0.5rem;
+}
+.section .work-experience > li > span {
+  font-size: 1.1rem;
+  color: #5270ff;
+}
+.section .work-experience > li h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.section .work-experience > li > div > span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.section .technologies {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.section .technologies li {
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 0.5rem;
+}
+
+@media screen and (min-width: 450px) {
+  .section .career {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title time"
+      "place now";
+  }
+  .career__title {
+    grid-area: title;
+  }
+  .career__place {
+    grid-area: place;
+  }
+  .career__time {
+    grid-area: time;
+  }
+  .career__now {
+    grid-area: now;
+  }
+
+  .section .technologies {
+    grid-template-columns: 1fr 1fr;
+  }
+  main > div {
+    padding: 3rem 10%;
+  }
+}
+@media screen and (min-width: 700px) {
+  main {
+    height: 100vh;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,42 @@
+header {
+  background-color: #5270ff;
+}
+
+header > div {
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+header .career {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  color: #5270ff;
+  margin: 0.5rem 0;
+  display: inline-block;
+}
+
+header .contacts {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+header .contacts > span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > div > p {
+  padding-top: 0.5rem;
+}
+
+@media screen and (min-width: 450px) {
+  header > div {
+    padding: 3rem 10%;
+  }
+}
