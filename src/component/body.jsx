@@ -22,7 +22,7 @@ const Body = () => {
             </p>
             <span className="career__time">2019 - Actualidad</span>
             <p className="career__now" style={{ color: "#888" }}>
-              Cursando 8vo semestre en la actualidad
+              Cursando 9no semestre en la actualidad
             </p>
           </div>
         </Section>
@@ -31,36 +31,6 @@ const Body = () => {
             {softSkills.map((item) => (
               <li key={item}>{item}</li>
             ))}
-          </ul>
-        </Section>
-        <Section title={"Capacitaciones"}>
-          <ul className="trainings">
-            {trainings.map(({ date, place, name }, index) => {
-              return (
-                <li key={index}>
-                  <div>
-                    <span>{date}</span>
-                    <p>{place}</p>
-                  </div>
-                  <h3>{name}</h3>
-                </li>
-              );
-            })}
-          </ul>
-        </Section>
-        <Section title={"Experiencia laboral"}>
-          <ul className="work-experience">
-            {workExperience.map(({ date, job, jobDescription }, index) => {
-              return (
-                <li key={index}>
-                  <span>{date}</span>
-                  <div>
-                    <h3>{job}</h3>
-                    <span>{jobDescription}</span>
-                  </div>
-                </li>
-              );
-            })}
           </ul>
         </Section>
         <Section title={"Tecnologías"}>
@@ -82,6 +52,36 @@ const Body = () => {
               </ul>
             </div>
           </div>
+        </Section>
+        <Section title={"Experiencia laboral"}>
+          <ul className="work-experience">
+            {workExperience.map(({ date, job, jobDescription }, index) => {
+              return (
+                <li key={index}>
+                  <span>{date}</span>
+                  <div>
+                    <h3>{job}</h3>
+                    <span>{jobDescription}</span>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </Section>
+        <Section title={"Capacitaciones"}>
+          <ul className="trainings">
+            {trainings.map(({ date, place, name }, index) => {
+              return (
+                <li key={index}>
+                  <div>
+                    <span>{date}</span>
+                    <p>{place}</p>
+                  </div>
+                  <h3>{name}</h3>
+                </li>
+              );
+            })}
+          </ul>
         </Section>
       </div>
     </main>
